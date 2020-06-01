@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>                
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Malaria detection using ML</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/gif">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/grayscale.css') }}">
+</head>
+<body>
+
+<div class="jumbotron jumbotron-fluid bg-info text-white text-center" style="background: rgb(12, 12, 12);">
+    <div class="container">
+        <h2 class="display-2">Classifying Malarial Cells using Convolutional Neural Networks</h2>
+        <br>
+            <img src="{{url_for('static', filename='ai-healthcare.jpeg')}}" align = "middle" width=1000 height=500/>
+        <br><br>
+        <p class="text-white bg-dark">Malaria is a mosquito-borne infectious disease that affects humans and other animals. Malaria causes symptoms that typically 
+            include fever, tiredness, vomiting, and headaches. This Web Application utilizes Tensorflow and Flask to develop and deploy a Machine Learning Web 
+            Application that can detect Malaria Cell using Image Processing.</p>
+    </div>
+</div>
+
+<div class="jumbotron jumbotron-fluid bg-info text-white text-center" style="background: rgb(15, 15, 15);">
+    <div class="container">
+        <h3 align="">
+            <form action="/result" method="POST" enctype="multipart/form-data">
+	<div>
+        <td colspan ="2" align="center">
+            <input type="file" id="real-file" name="pic" accept="image/*"></td>
+    </div>
+        <br>
+            <td colspan ="2" align="center">
+                <input type="submit" value="Submit"></td>
+            <br>
+            </div>
+    </form>
+</div> 
+
+<style> 
+input[type=submit] {
+  background-color: rgb(19, 18, 18);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  margin: 3px 1px;
+  cursor: pointer;
+}
+div{
+  padding:10px 20px;
+  background-color: rgb(10, 10, 10);
+  border:3px solid #faf8f8;
+  position:relative;
+  color:rgb(255, 255, 255);
+  border-radius:6px;
+}
+</style>
+</body>
+</html>

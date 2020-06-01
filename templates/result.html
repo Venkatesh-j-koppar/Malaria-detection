@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Your Report</title>
+      <link rel="icon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/gif">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/grayscale.css') }}">
+   </head>
+   <body>
+      
+   <div class="jumbotron jumbotron-fluid bg-info text-white text-center" style="background: rgb(7, 7, 7);">
+      <div class="container">
+         <h2 class="display-1">{{ prediction }}</h2>
+      </div><br>
+
+      <div>
+         <p colour="white">
+            <h2 align="center">Malaria Parasites and it's Stages</h2></p>
+               <br>
+                  <img src="{{url_for('static', filename='Malaria Parasites and Stages.jpg')}}" align = "middle" width=1000 height=800/>
+               <br>
+         </div>
+     </div>
+   
+     <div class="jumbotron jumbotron-fluid bg-info text-white text-center" style="background: rgb(8, 8, 8);">
+      <div class="container">
+      </p>
+         <br>
+            <h2 align="center">How our Application is better than Traditional Methods?</h2>
+         <br>
+      <p><br>
+         <font size="4">
+         Where malaria is not endemic any more (such as in the United States), health-care providers may not be familiar with the disease. 
+         Clinicians seeing a malaria patient may forget to consider malaria among the potential diagnoses and not order the needed diagnostic 
+         tests. Laboratorians may lack experience with malaria and fail to detect parasites when examining blood smears under the microscope. 
+         Malaria is an acute febrile illness. In a non-immune individual, symptoms usually appear 10–15 days after the infective mosquito bite. 
+         The first symptoms – fever, headache, and chills – may be mild and difficult to recognize as malaria. If not treated within 24 hours, 
+         P.falciparum malaria can progress to severe illness, often leading to death. Our Model performs fairly well with an accuracy of 95% 
+         and an F1 Score of 95% and Recall Score of 92%. This provides a handy tool to utilize the power of ML, DL and AI in Binary 
+         Classification Problems where time and accuracy is the paramount objective of classification.
+         </font><br>
+      </p>
+      </div>
+   </div>
+
+   <div class="jumbotron jumbotron-fluid bg-info text-white text-center" style="background: rgb(7, 7, 7);">
+      <div class="container">
+         <h2 align="center"><b>This Application is developed by.....</b></h2>
+            <font size="4">
+            <p align="center">
+               <b><i><br>Ramesh D Koppad<br></b></i>
+               <b><i><br>Venkatesh J Koppar<br></b></i>
+               <b><i><br>Shreesha B Shinganmalli<br></b></i>
+               <b><i><br>Hrishikesh R Raidurg<br></b></i>
+            </p>
+            </font>
+      </div>
+   </div>
+
+      <style> 
+         input[type=submit] {
+           background-color: rgb(12, 12, 12);
+           border: none;
+           color: white;
+           padding: 12px 24px;
+           text-decoration: none;
+           margin: 3px 1px;
+           cursor: pointer;
+         }
+         div{
+           padding:10px 20px;
+           background-color: rgb(15, 15, 15);
+           border: 3px solid #faf8f8;
+           position:relative;
+           color:rgb(238, 234, 234);
+           border-radius:8px;
+         }
+         </style>
+
+      
+      
+   </body>
+</html>
