@@ -11,14 +11,32 @@
       <link rel="stylesheet" href="{{ url_for('static', filename='css/grayscale.css') }}">
    </head>
    <body>
+      <style>
+         
+         .blink {
+            width: 100%;
+            animation: blink-animation 1s steps(5, start) infinite;
+            -webkit-animation: blink-animation 1s steps(5, start) infinite;
+            }
+            @keyframes blink-animation {
+            to {
+               visibility: hidden;
+            }
+            }
+            @-webkit-keyframes blink-animation {
+            to {
+               visibility: hidden;
+            }
+            }
+      </style>
       
    <div class="jumbotron jumbotron-fluid bg-info text-white text-center" style="background: rgb(250, 246, 246);">
       <div class="container"  style="background: white">
 
-         {% if prediction=="True" %}
-            <p style="background: green">This cell is most likely to be Not Infected with Malarial Parasite.</p>
+         {% if p=="True" %}
+            <h1 class="blink" style="background: green">This cell is most likely to be Not Infected with Malarial Parasite.</h1>
          {% else %}
-            <p style="background: red ">This cell is most likely to be Infected with Malarial Parasite. </p>
+            <h1 class="blink" style="background: red ">This cell is most likely to be Infected with Malarial Parasite. </h1>
          {% endif %}
       
       </div><br>
@@ -27,7 +45,7 @@
          <p colour="white">
             <h2 align="center">Malaria Parasites and it's Stages</h2></p>
                <br>
-                  <img src="{{url_for('static', filename='Malaria Parasites and Stages.jpg')}}" align = "middle" width=1000 height=800/>
+                  <img src="{{url_for('static', filename='Malaria Parasites and Stages.jpg')}}" alt="image" class="img-fluid" style="width:60% ;height:60% " />
                <br>
          </div>
      </div>
