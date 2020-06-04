@@ -40,9 +40,9 @@ def result():
         result = int(np.argmax(result))
         print("result actual", result) 
         if result==0:
-            prediction='This cell is most likely to be Not Infected with Malarial Parasite.'
+            prediction='True'
         else:
-            prediction='This cell is most likely to be Infected with Malarial Parasite.'
+            prediction='False'
         print(prediction)
         return render_template("result.html", prediction=prediction)
 
